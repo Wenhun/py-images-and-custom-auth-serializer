@@ -49,6 +49,7 @@ class MovieImageSerializer(serializers.ModelSerializer):
 
 
 class MovieListSerializer(serializers.ModelSerializer):
+
     image = serializers.ImageField(read_only=True)
     genres = serializers.SlugRelatedField(
         many=True, read_only=True, slug_field="name"
